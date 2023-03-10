@@ -1,8 +1,6 @@
 package KataTrening.Kata6.Difference_of_2;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-
-import KataTrening.Kata6.Difference_of_2.Difference_of_2;
 import org.testng.annotations.Test;
 
 public class Tests {
