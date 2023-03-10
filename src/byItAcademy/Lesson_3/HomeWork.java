@@ -16,9 +16,29 @@ public class HomeWork {
         System.out.println("Введите C");
         int c = scanner.nextInt();
         zadanie_1(a, b, c);
+        zadanie_2(a, b, c);
     }
 
     public static void zadanie_1(int a, int b, int c) {
-        
+        if ((a % 2 == 0) && (b % 2 == 0) && (c % 2 == 0)) System.out.println("A B C являються четными числами");
+        else if ((a % 2 == 0) && (b % 2 == 0) && (c % 2 != 0)) System.out.println("A B являються четными числами");
+        else if ((a % 2 == 0) && (b % 2 != 0) && (c % 2 == 0)) System.out.println("A C являються четными числами");
+        else if ((a % 2 != 0) && (b % 2 == 0) && (c % 2 == 0)) System.out.println("B C являються четными числами");
+        else if ((a % 2 == 0) && (b % 2 != 0) && (c % 2 != 0)) System.out.println("A являються четными числом");
+        else if ((a % 2 != 0) && (b % 2 == 0) && (c % 2 != 0)) System.out.println("B являються четными числом");
+        else if ((a % 2 != 0) && (b % 2 != 0) && (c % 2 == 0)) System.out.println("C являються четными числом");
+        else System.out.println("Четных нету");
+    }
+
+    public static void zadanie_2(int a, int b, int c) {
+        if ((a % 2 == 0) && (a % 5 == 0)) {
+            System.out.println("A делиться на 2 и 5");
+        }
+        if ((b % 2 == 0) && (b % 5 == 0)) {
+            System.out.println("B делиться на 2 и 5");
+        }
+        if ((c % 2 == 0) && (c % 5 == 0)) {
+            System.out.println("C делиться на 2 и 5");
+        }
     }
 }
