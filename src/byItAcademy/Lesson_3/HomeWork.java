@@ -5,6 +5,7 @@ import java.util.Scanner;
 /*
 1. На вход даны 3 числа. Вывести в консоль только четные числа
 2. На вход даны 3 числа. Вывести в консоль только те числа, которые делятся на 2 и на 5
+3. На вход даны 2 числа. Вывести в консоль только те числа, которые делятся на 2 или на 3
 */
 public class HomeWork {
     public static void main(String[] args) {
@@ -17,6 +18,7 @@ public class HomeWork {
         int c = scanner.nextInt();
         zadanie_1(a, b, c);
         zadanie_2(a, b, c);
+        zadanie_3(a, b);
 
     }
 
@@ -47,5 +49,39 @@ public class HomeWork {
         } else if ((c % 2 == 0) && (c % 5 == 0)) {
             System.out.println("C делиться на 2 и 5");
         } else System.out.println("Числа не делятся");
+    }
+
+    public static void zadanie_3(int a, int b) {
+        if ((a % 2 == 0 && a % 3 == 0) && (b % 2 == 0 && b % 3 == 0)) {
+            System.out.println("A и B делятся на 2 и 3 ");
+        } else if ((a % 2 == 0 && a % 3 != 0) && (b % 2 == 0 && b % 3 == 0)) {
+            System.out.println("A делится на 2, а Б на 2/3");
+        } else if (((a % 3 == 0 && a % 2 != 0) && (b % 2 == 0 && b % 3 == 0))) {
+            System.out.println("A делится на 3, а Б на 2/3");
+        } else if ((a % 2 == 0 && a % 3 != 0) && b % 3 == 0) {
+            System.out.println("A делится на 2, а Б на 3");
+        } else if ((a % 2 == 0 && a % 3 != 0) && b % 2 == 0) {
+            System.out.println("A делится на 2, а Б на 2");
+        } else if (((a % 2 != 0 && a % 3 == 0) && b % 3 == 0)) {
+            System.out.println("A делится на 3, а Б на 3");
+        } else if (((a % 2 != 0 && a % 3 == 0) && b % 2 == 0)) {
+            System.out.println("A делится на 3, а Б на 2");
+        } else if (((a % 2 == 0 && a % 3 == 0) && b % 2 == 0)) {
+            System.out.println("A делится на 2/3, а Б на 2");
+        } else if (((a % 2 == 0 && a % 3 == 0) && b % 3 == 0)) {
+            System.out.println("A делится на 2/3, а Б на 2");
+        } else if ((a % 2 == 0 && a % 3 == 0)) {
+            System.out.println("A делится на 2/3");
+        } else if (a % 2 == 0) {
+            System.out.println("A делится на 2");
+        } else if (a % 3 == 0) {
+            System.out.println("A делится на 3");
+        } else if ((b % 2 == 0 && b % 3 == 0)) {
+            System.out.println("B делится на 2/3");
+        } else if (b % 2 == 0) {
+            System.out.println("B делится на 2");
+        } else if (b % 3 == 0) {
+            System.out.println("B делится на 3");
+        } else System.out.println("ПамПамПам");
     }
 }
