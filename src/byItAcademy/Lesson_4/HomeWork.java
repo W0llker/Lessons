@@ -1,5 +1,6 @@
 package byItAcademy.Lesson_4;
 
+import java.util.Base64;
 import java.util.Scanner;
 
 /*
@@ -11,10 +12,11 @@ import java.util.Scanner;
  */
 public class HomeWork {
     public static void main(String[] args) {
-        z1();
-        z2();
-        z3();
-        z4();
+//        z1();
+//        z2();
+//        z3();
+//        z4();
+        z5();
 
     }
 
@@ -67,5 +69,12 @@ public class HomeWork {
             }
             a /= 10;
         }
+    }
+    public static void z5() {
+        Base64 Base64 = null;
+        byte[] decodedBytes = Base64.getDecoder().decode("SmF2YSDQvdC1INGC0L7RgNC80L7Qt9C40YIhCg==");
+        String decodedString = new String(decodedBytes);
+        System.out.println(decodedString);
+        System.out.println("pull request");
     }
 }
