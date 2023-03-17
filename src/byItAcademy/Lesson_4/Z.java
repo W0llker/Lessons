@@ -16,7 +16,7 @@ public class Z {
         z2();
         z3();
         z4();
-        System.out.println(312);
+        System.out.println();
 
     }
 
