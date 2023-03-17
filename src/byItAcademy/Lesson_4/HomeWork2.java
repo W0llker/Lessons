@@ -1,6 +1,5 @@
 package byItAcademy.Lesson_4;
 
-import java.util.Base64;
 import java.util.Scanner;
 
 /*
@@ -10,13 +9,12 @@ import java.util.Scanner;
 3. Ввести число с консоли, которое не заканчивается на 0. Вывести число в обратном порядке. Использовать оператор %. (цикл while, наподобие задачи, которую разбирали в конце занятия)
 4. Ввести число с консоли, которое не заканчивается на 0. Вывести чётные и нечётные числа через while and if. Использовать оператор %.
  */
-public class HomeWork {
+public class HomeWork2 {
     public static void main(String[] args) {
-//        z1();
-//        z2();
-//        z3();
-//        z4();
-        z5();
+        z1();
+        z2();
+        z3();
+        z4();
 
     }
 
@@ -70,11 +68,5 @@ public class HomeWork {
             a /= 10;
         }
     }
-    public static void z5() {
-        Base64 Base64 = null;
-        byte[] decodedBytes = Base64.getDecoder().decode("SmF2YSDQvdC1INGC0L7RgNC80L7Qt9C40YIhCg==");
-        String decodedString = new String(decodedBytes);
-        System.out.println(decodedString);
-        System.out.println("Вдовенков");
-    }
+
 }
