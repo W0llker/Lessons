@@ -2,7 +2,7 @@ package byItAcademy.Lesson_4;
 
 import java.util.Scanner;
 
-public class Der {
+public class HomeWork {
     /*
     1. Вывести все числа кратные 7 или 3 в диапазоне от 1 до 100.
     2. Ввести 2 положительных числа с консоли с помощью сканера. Вывести сумму чисел от одного числа до другого.
