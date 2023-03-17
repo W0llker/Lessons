@@ -16,9 +16,6 @@ public class HomeWork {
         z2();
         z3();
         z4();
-        System.out.println();
-        System.out.println();
-
     }
 
     public static void z1() {
