@@ -75,7 +75,6 @@ public class HomeWork {
         byte[] decodedBytes = Base64.getDecoder().decode("SmF2YSDQvdC1INGC0L7RgNC80L7Qt9C40YIhCg==");
         String decodedString = new String(decodedBytes);
         System.out.println(decodedString);
-        System.out.println("pull request");
-        System.out.println("pull request");
+        System.out.println("Вдовенков");
     }
 }
