@@ -70,11 +70,4 @@ public class HomeWork {
             a /= 10;
         }
     }
-    public static void z5() {
-        Base64 Base64 = null;
-        byte[] decodedBytes = Base64.getDecoder().decode("SmF2YSDQvdC1INGC0L7RgNC80L7Qt9C40YIhCg==");
-        String decodedString = new String(decodedBytes);
-        System.out.println(decodedString);
-        System.out.println("Вдовенков");
-    }
 }
