@@ -8,8 +8,8 @@ public class HomeWork {
 4. Создать массив (вручную). Отсортировать элементы массива в порядке возрастания. Вывести полученный массив. Выполнить с помощью цикла while
      */
     public static void main(String[] args) {
-//        z1();
-//        z2();
+        z1();
+        z2();
         z3();
     }
 
@@ -21,6 +21,7 @@ public class HomeWork {
             }
             System.out.print(a[i] + " ");
         }
+        System.out.println();
     }
 
     public static void z2() {
@@ -37,12 +38,12 @@ public class HomeWork {
                 mr = i;
             }
         }
-        System.out.println(max);
         a[m] = -1;
         a[mr] = -1;
         for (int c : a) {
             System.out.print(c + " ");
         }
+        System.out.println();
     }
 
     public static void z3() {
@@ -64,5 +65,6 @@ public class HomeWork {
         for (int z : a) {
             System.out.print(z + " ");
         }
+        System.out.println();
     }
 }
