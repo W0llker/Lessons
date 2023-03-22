@@ -93,6 +93,6 @@ public class Student {
                 ", faculty='" + faculty + '\'' +
                 ", course=" + course +
                 ", group='" + group + '\'' +
-                '}';
+                "}\n";
     }
 }
