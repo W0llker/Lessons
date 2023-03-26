@@ -76,6 +76,7 @@ public class Main {
     }
 
     public static String zadanie3_1(String string) {
+        //удалил все символы кроме букв и пробелов
         Pattern pattern = Pattern.compile("[^a-zA-ZА-Яа-я\\s]");
         Matcher matcher = pattern.matcher(string);
         string = matcher.replaceAll("");
@@ -83,7 +84,7 @@ public class Main {
         Pattern pattern1 = Pattern.compile("\\s+");
         matcher = pattern1.matcher(string);
         string = matcher.replaceAll(" ");
-
+        //Нашел повторяющиеся символы и поставил между ними пробел
         String[] text = string.split(" ");
         String result = "";
         pattern1 = Pattern.compile("([A-zА-я])\\1+");
