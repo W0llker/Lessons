@@ -22,6 +22,17 @@ public class Patient {
         this.numberMedCards = numberMedCards;
         this.diagnosis = diagnosis;
     }
+    public String information() {
+        return  "Patient" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", address='" + address + '\'' +
+                ", mobilePhone='" + mobilePhone + '\'' +
+                ", numberMedCards=" + numberMedCards +
+                ", diagnosis='" + diagnosis + '\'';
+    }
 
     public void setMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
