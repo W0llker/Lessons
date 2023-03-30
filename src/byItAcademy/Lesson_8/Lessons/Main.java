@@ -33,7 +33,10 @@ public class Main {
         zoo.addAnimal(l3);
         zoo.animals();
         zoo.informationZoo();
-
+        System.out.println("*****************************************");
+        zoo.removeAnimal(6);
+        zoo.animals();
+        zoo.informationZoo();
     }
     public Zoo addAnimal(){
         Zoo zoo = new Zoo();

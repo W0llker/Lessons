@@ -7,11 +7,26 @@ package byItAcademy.Lesson_8.Lessons;
  */
 public class Zoo {
     private Animal[] an = new Animal[20];
-    private int count = 0;
+    public int count = 0;
 
     public void addAnimal(Animal a) {
-        an[count] = a;
+        for (int i = 0; i < an.length; i++) {
+            if (an[i] == null) {
+                an[i] = a;
+                an[i].setId(count);
+                break;
+            }
+        }
         count++;
+    }
+
+    public void removeAnimal(int a) {
+        for (int i = 0; i < an.length; i++) {
+            if (an[i] != null && an[i].getId() == a) {
+                an[i] = null;
+                count--;
+            }
+        }
     }
 
     public int getCount() {
