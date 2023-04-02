@@ -40,6 +40,8 @@ public class Main {
         zoo.removeAnimal(4);
         zoo.animals();
         zoo.informationZoo();
+        System.out.println("*****************************************");
+        zoo.soundsAnimal();
     }
     public Zoo addAnimal(){
         Zoo zoo = new Zoo();

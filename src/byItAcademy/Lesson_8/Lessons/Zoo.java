@@ -46,6 +46,11 @@ public class Zoo {
             an = copyAnimal;
         }
     }
+    public void soundsAnimal() {
+        for (Animal animal : an) {
+            animal.sounds();
+        }
+    }
 
     public void animals() {
         System.out.println("Количество животных в зоопарке = " + an.length);
