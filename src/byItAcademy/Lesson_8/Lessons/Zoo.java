@@ -59,7 +59,7 @@ public class Zoo {
     public void informationZoo() {
         for (Animal a : an) {
             if (a != null) {
-                System.out.println(a.toString());
+                System.out.println(a);
             }
         }
     }
