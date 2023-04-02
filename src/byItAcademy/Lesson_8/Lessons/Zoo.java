@@ -15,8 +15,7 @@ public class Zoo {
         if (an.length == 0) {
             an = new Animal[1];
             an[0] = a;
-        }
-        else {
+        } else {
             Animal[] copyAnimal = new Animal[an.length + 1];
             for (int i = 0; i < copyAnimal.length; i++) {
                 if (i == copyAnimal.length - 1) {
@@ -38,13 +37,10 @@ public class Zoo {
         if (cheakAnimal == true) {
             int j = 0;
             Animal[] copyAnimal = new Animal[an.length - 1];
-            for (Animal animal : an){
-                for (int i = j; i < copyAnimal.length; i++) {
-                    if (animal.getId() != a) {
-                        copyAnimal[i] = animal;
-                        j++;
-                        break;
-                    }
+            for (Animal animal : an) {
+                if (animal.getId() != a) {
+                    copyAnimal[j] = animal;
+                    j++;
                 }
             }
             an = copyAnimal;
