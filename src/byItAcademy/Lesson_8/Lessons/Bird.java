@@ -1,4 +1,7 @@
 package byItAcademy.Lesson_8.Lessons;
+
+
+
 /*
 Птица: семейство, максимальная высота полёта. В классе птица методы-петь, клевать, высиживать птенцов.
 При этом, в консоли должны выводиться поля семейства птиц с соответствующим поведением (пример: Воробей поёт).
@@ -13,10 +16,10 @@ public class Bird extends Animal {
         this.height = height;
     }
 
-    public void singing() {
+    @Override
+    public void sounds() {
         System.out.println(family + " поет");
     }
-
 
     public void pecking() {
         System.out.println(family + " клюет");

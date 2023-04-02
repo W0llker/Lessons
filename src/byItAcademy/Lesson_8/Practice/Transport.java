@@ -1,6 +1,6 @@
 package byItAcademy.Lesson_8.Practice;
 
-public class Transport {
+public abstract class Transport {
     private String color;
     int maxSpeed;
     //плавает летает едет
@@ -16,6 +16,7 @@ public class Transport {
         this.type = type;
         this.weight = weight;
     }
+    public abstract void sound();
 
     public void setColor(String color) {
         this.color = color;

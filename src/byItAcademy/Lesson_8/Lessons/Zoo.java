@@ -6,35 +6,53 @@ package byItAcademy.Lesson_8.Lessons;
 Вывести в консоль количество добавленных животных. Созданный метод, должен возвращать новый класс зоопарк.
  */
 public class Zoo {
-    private Animal[] an = new Animal[20];
-    public int count = 0;
+    private Animal[] an = new Animal[0];
+    public int idAnimal = 0;
 
     public void addAnimal(Animal a) {
-        for (int i = 0; i < an.length; i++) {
-            if (an[i] == null) {
-                an[i] = a;
-                an[i].setId(count);
-                break;
-            }
+        idAnimal++;
+        a.setId(idAnimal);
+        if (an.length == 0) {
+            an = new Animal[1];
+            an[0] = a;
         }
-        count++;
+        else {
+            Animal[] copyAnimal = new Animal[an.length + 1];
+            for (int i = 0; i < copyAnimal.length; i++) {
+                if (i == copyAnimal.length - 1) {
+                    copyAnimal[i] = a;
+                } else copyAnimal[i] = an[i];
+            }
+            an = copyAnimal;
+        }
     }
 
     public void removeAnimal(int a) {
-        for (int i = 0; i < an.length; i++) {
-            if (an[i] != null && an[i].getId() == a) {
-                an[i] = null;
-                count--;
+        boolean cheakAnimal = false;
+        for (Animal animal : an) {
+            if (animal.getId() == a) {
+                cheakAnimal = true;
+                break;
             }
+        }
+        if (cheakAnimal == true) {
+            int j = 0;
+            Animal[] copyAnimal = new Animal[an.length - 1];
+            for (Animal animal : an){
+                for (int i = j; i < copyAnimal.length; i++) {
+                    if (animal.getId() != a) {
+                        copyAnimal[i] = animal;
+                        j++;
+                        break;
+                    }
+                }
+            }
+            an = copyAnimal;
         }
     }
 
-    public int getCount() {
-        return count;
-    }
-
     public void animals() {
-        System.out.println("Количество животных в зоопарке = " + count);
+        System.out.println("Количество животных в зоопарке = " + an.length);
     }
 
     public void informationZoo() {

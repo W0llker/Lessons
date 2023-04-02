@@ -5,6 +5,9 @@ package byItAcademy.Lesson_8.Lessons;
 1.3	Создать класс Зоопарк животных, в котором будут жить наши животные. В нем определить массив животных, которые будут проживать в этом зоопарк.
 Добавить в этот зоопарк по три собаки и по три птицы. (необходимо определить метод, который будет добавлять животное в зоопарк.
 Вывести в консоль количество добавленных животных. Созданный метод, должен возвращать новый класс зоопарк.
+
+new
+
  */
 
 public class Main {
@@ -15,7 +18,6 @@ public class Main {
         dog.play();
         dog.jump();
         bird.pecking();
-        bird.singing();
 
         System.out.println("Зоопарк");
         Zoo zoo = new Main().addAnimal();
@@ -35,6 +37,7 @@ public class Main {
         zoo.informationZoo();
         System.out.println("*****************************************");
         zoo.removeAnimal(6);
+        zoo.removeAnimal(4);
         zoo.animals();
         zoo.informationZoo();
     }
