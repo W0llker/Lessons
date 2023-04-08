@@ -4,7 +4,7 @@ package byItAcademy.Lesson_10.Lesson;
 У сапёра к примеру будут поля: модель, потребляемая мощность,
 средство для разминирования (шасси номер), материал
  */
-public class Sapper implements Robot,RobotEngineer {
+public class Sapper implements Robot, RobotEngineer {
     private String model;
     private int powerСonsumption;
     private String agregat;
@@ -32,7 +32,7 @@ public class Sapper implements Robot,RobotEngineer {
 
     @Override
     public void uniquePossibility() {
-        if(isOn) {
+        if (isOn) {
             if (quality == 0) {
                 System.out.println("Робот поломан");
                 offRobot();
@@ -45,7 +45,7 @@ public class Sapper implements Robot,RobotEngineer {
                 }
                 quality -= 25;
             }
-        }else System.out.println("Робот сапер выключен");
+        } else System.out.println("Робот сапер выключен");
     }
 
     @Override

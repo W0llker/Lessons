@@ -8,6 +8,7 @@ public interface Robot {
     Robot createRobot(String model, int powerСonsumption, String agregat);
 
     void repairRobot();
+
     void uniquePossibility();
 
     void changeMainAgregat(String agreagt);

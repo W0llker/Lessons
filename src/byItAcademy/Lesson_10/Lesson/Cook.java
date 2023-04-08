@@ -12,9 +12,10 @@ public class Cook implements Robot {
     private String agregat;
     private boolean isOn;
     private int quality;
+
     @Override
     public void uniquePossibility() {
-        if(isOn) {
+        if (isOn) {
             if (quality == 0) {
                 System.out.println("Робот поломан");
                 offRobot();
@@ -33,7 +34,7 @@ public class Cook implements Robot {
                 }
                 quality -= 25;
             }
-        }else System.out.println("Робот повар выключен");
+        } else System.out.println("Робот повар выключен");
     }
 
     @Override

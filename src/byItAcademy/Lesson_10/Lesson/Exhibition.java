@@ -27,8 +27,9 @@ public class Exhibition {
             exhibition1 = copyRobot;
         }
     }
+
     public void addRobotEngineer(Robot robotEngineer) {
-        if(robotEngineer instanceof RobotEngineer){
+        if (robotEngineer instanceof RobotEngineer) {
             if (exhibition2.length == 0) {
                 exhibition2 = new Robot[1];
                 exhibition2[0] = robotEngineer;
@@ -41,12 +42,13 @@ public class Exhibition {
                 }
                 exhibition2 = copyRobot;
             }
-        }else {
+        } else {
             System.out.println("В эту выставку могу быть добавленны только роботы инженеры");
         }
     }
+
     public void addRobotSapper(Robot robotSapper) {
-        if(robotSapper instanceof Sapper){
+        if (robotSapper instanceof Sapper) {
             if (exhibition3.length == 0) {
                 exhibition3 = new Robot[1];
                 exhibition3[0] = robotSapper;
@@ -59,7 +61,7 @@ public class Exhibition {
                 }
                 exhibition3 = copyRobot;
             }
-        }else {
+        } else {
             System.out.println("В эту выставку могу быть добавленны только роботы сапперы");
         }
     }
@@ -73,6 +75,7 @@ public class Exhibition {
             System.out.println("***********************");
         }
     }
+
     public void activiteRobotEnginer() {
         System.out.println("\nВыставка инженерных роботов");
         for (Robot r : exhibition2) {
@@ -82,6 +85,7 @@ public class Exhibition {
             System.out.println("***********************");
         }
     }
+
     public void activiteRobotSapper() {
         System.out.println("\nВыставка саперов роботов");
         for (Robot r : exhibition3) {
