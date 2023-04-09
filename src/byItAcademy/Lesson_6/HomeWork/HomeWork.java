@@ -43,6 +43,7 @@ b) список пациентов, номер медицинской карты
                 patients[j] = p;
                 j++;
             }
+            p.information();
         }
         return patients;
     }
