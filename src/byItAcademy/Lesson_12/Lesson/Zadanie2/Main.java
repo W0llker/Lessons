@@ -33,7 +33,7 @@ public class Main {
         List<Person> personList = new ArrayList<>();
         Set<Map.Entry<Person, String>> mapSet = map.entrySet();
         for (Map.Entry<Person, String> maps : mapSet) {
-            if (key == maps.getValue()) {
+            if (key.equals(maps.getValue())) {
                 personList.add(maps.getKey());
             }
         }
