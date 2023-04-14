@@ -19,9 +19,10 @@ public class Main {
         ward1.addPatients(new Patient("Олег", "Шишков", "Асма", 20, Gender.Male));
         ward1.addPatients(new Patient("Настя", "Шрек", "Асма", 15, Gender.Female));
 
-        Ward ward2 = new Ward(356,Gender.Male,"Асма");
+        Ward ward2 = new Ward(356, Gender.Male, "Асма");
         ward2.addPatients(new Patient("Саня", "Кутузов", "Асма", 15, Gender.Male));
         ward2.addPatients(new Patient("Настя", "Шрек", "Асма", 15, Gender.Female));
+        ward2.addPatients(new Patient("Антон", "Штейн", "Что то с спиной", 15, Gender.Male));
         ward2.addPatients(new Patient("Олег", "Шишков", "Асма", 20, Gender.Male));
         System.out.println(ward2);
         ward2.sortedNumberId();

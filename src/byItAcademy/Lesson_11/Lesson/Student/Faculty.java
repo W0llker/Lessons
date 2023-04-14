@@ -19,7 +19,7 @@ public class Faculty {
     }
 
     public void cheakCountFaculte() {
-        if (countStudentInFaculty() <= 20) {
+        if (countStudentInFaculty() < 20) {
             isNotActive();
         } else {
             isActive();
