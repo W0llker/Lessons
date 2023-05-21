@@ -32,4 +32,13 @@ public class Americano implements Coffee {
         this.water = water;
         this.milk = milk;
     }
+
+    @Override
+    public String toString() {
+        return "Americano{" +
+                "water=" + water +
+                ", milk=" + milk +
+                ", sugar=" + sugar +
+                '}';
+    }
 }

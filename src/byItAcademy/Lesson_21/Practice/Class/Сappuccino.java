@@ -18,4 +18,13 @@ public class Сappuccino implements Coffee {
         sugar = i;
         System.out.println("Добавлено " + sugar + " куска сахара");
     }
+
+    @Override
+    public String toString() {
+        return "Сappuccino{" +
+                "water=" + water +
+                ", milk=" + milk +
+                ", sugar=" + sugar +
+                '}';
+    }
 }

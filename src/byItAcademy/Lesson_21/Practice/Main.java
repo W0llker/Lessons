@@ -15,5 +15,6 @@ public class Main {
 
         CoffeeHouse coffeeHouse = CoffeeHouse.getInstans();
         coffeeHouse.addCoffee(coffee);
+        System.out.println(coffeeHouse);
     }
 }

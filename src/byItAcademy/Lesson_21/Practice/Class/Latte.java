@@ -18,4 +18,13 @@ public class Latte implements Coffee {
         this.water = water;
         this.milk = milk;
     }
+
+    @Override
+    public String toString() {
+        return "Latte{" +
+                "water=" + water +
+                ", milk=" + milk +
+                ", sugar=" + sugar +
+                '}';
+    }
 }

@@ -14,4 +14,12 @@ public class Espresso implements Coffee {
     public Espresso(int water) {
         this.water = water;
     }
+
+    @Override
+    public String toString() {
+        return "Espresso{" +
+                "water=" + water +
+                ", sugar=" + sugar +
+                '}';
+    }
 }

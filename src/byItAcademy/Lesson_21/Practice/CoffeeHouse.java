@@ -22,4 +22,10 @@ public class CoffeeHouse {
         return coffeeHouse;
     }
 
+    @Override
+    public String toString() {
+        return "CoffeeHouse{" +
+                "coffeeList=" + coffeeList +
+                '}';
+    }
 }
