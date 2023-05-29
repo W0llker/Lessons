@@ -1,5 +1,7 @@
 package Project.Class;
 
+import Project.repository.RepositoryAccount;
+
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -16,6 +18,9 @@ public class Accounts implements Serializable {
         this.numberAccounts = numberAccounts;
         this.currency = currency;
         this.userId = userId;
+    }
+    public String accountInformation() {
+        return "id:" + id + " номер:" + numberAccounts + " валюта:" +currency;
     }
 
     public long getId() {
@@ -34,14 +39,6 @@ public class Accounts implements Serializable {
         this.numberAccounts = numberAccounts;
     }
 
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
     public Double getValue() {
         return value;
     }
@@ -56,6 +53,18 @@ public class Accounts implements Serializable {
 
     public void setUserId(long userId) {
         this.userId = userId;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public void setValue(double value) {
+        this.value = value;
     }
 
     @Override

@@ -23,6 +23,9 @@ public class Users implements Serializable {
         this.name = name;
         this.surName = surName;
     }
+    public String userInformation() {
+        return "Имя:" + name + " Фамилия:" + surName;
+    }
 
     @Override
     public boolean equals(Object o) {
