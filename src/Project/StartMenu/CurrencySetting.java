@@ -8,9 +8,10 @@ import java.util.TimerTask;
 
 public class CurrencySetting extends TimerTask {
     private final CurrencyRepository currencyRepository;
+
     public CurrencySetting() {
         currencyRepository = new CurrencyRepository();
-        String[] com = splittingString(currencyRepository.deserializationCurrency(),"commission=");
+        String[] com = splittingString(currencyRepository.deserializationCurrency(), "commission=");
         Currency.commission = Double.parseDouble(com[1]);
     }
 
@@ -22,7 +23,8 @@ public class CurrencySetting extends TimerTask {
             Currency.currency.put(splitValueCurrency[0], Double.valueOf(splitValueCurrency[1]));
         }
     }
-    public  static String[] splittingString(String currency, String regex) {
+
+    public static String[] splittingString(String currency, String regex) {
         return currency.split(regex);
     }
 }

@@ -1,7 +1,5 @@
 package Project.Class;
 
-import Project.repository.RepositoryAccount;
-
 import java.io.Serial;
 import java.io.Serializable;
 
@@ -19,8 +17,9 @@ public class Accounts implements Serializable {
         this.currency = currency;
         this.userId = userId;
     }
+
     public String accountInformation() {
-        return "id:" + id + " номер:" + numberAccounts + " валюта:" +currency;
+        return "id:" + id + " номер:" + numberAccounts + " валюта:" + currency;
     }
 
     public long getId() {

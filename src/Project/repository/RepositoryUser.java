@@ -1,7 +1,5 @@
 package Project.repository;
 
-import Project.Class.Accounts;
-import Project.Class.Operation;
 import Project.Class.Users;
 import Project.Exception.ExceptionUsers;
 

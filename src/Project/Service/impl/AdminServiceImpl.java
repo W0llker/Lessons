@@ -5,15 +5,12 @@ import Project.Exception.ExceptionOperation;
 import Project.Exception.ExceptionUsers;
 import Project.Service.AdminService;
 import Project.StartMenu.CurrencySetting;
-import Project.Validator.UsersValidator;
 import Project.repository.CurrencyRepository;
 import Project.repository.RepositoryAccount;
 import Project.repository.RepositoryOperation;
 import Project.repository.RepositoryUser;
 import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -77,13 +74,19 @@ public class AdminServiceImpl implements AdminService {
 
     private void changeClientIdTo(long id) {
         List<Operation> operations = repositoryOperation.deserialization();
-        operations.stream().filter(operation -> operation.getClientIdTo() == id).forEach(operation -> operation.setClientIdTo(-1));
+        operations.stream().filter(operation -> operation.getClientIdTo() == id).forEach(operation -> {
+            operation.setClientIdTo(-1);
+            operation.setClientIdAccountTo((long) -1);
+        });
         repositoryOperation.uploadOperation();
     }
 
     private void changeClientIdFrom(long id) {
         List<Operation> operations = repositoryOperation.deserialization();
-        operations.stream().filter(operation -> operation.getClientIdFrom() == id).forEach(operation -> operation.setClientIdFrom(-1));
+        operations.stream().filter(operation -> operation.getClientIdFrom() == id).forEach(operation -> {
+            operation.setClientIdFrom(-1);
+            operation.setClientIdAccountFrom((long) -1);
+        });
         repositoryOperation.uploadOperation();
     }
 
@@ -170,14 +173,14 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public List<List<Operation>> getListOperation() {
         List<Operation> list = repositoryOperation.deserialization();
-        List<List<Operation>> listList = Lists.partition(list,4);
+        List<List<Operation>> listList = Lists.partition(list, 4);
         return listList;
     }
 
     @Override
     public List<List<Users>> getListUsers() {
         List<Users> list = repositoryUser.deserialization();
-        List<List<Users>> listList = Lists.partition(list,4);
+        List<List<Users>> listList = Lists.partition(list, 4);
         return listList;
     }
 }

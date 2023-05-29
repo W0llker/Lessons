@@ -4,13 +4,13 @@ import Project.Class.Role;
 import Project.Class.Users;
 import Project.Exception.ExceptionUsers;
 import Project.Service.UserService;
-import Project.Validator.UsersValidator;
 import Project.repository.RepositoryUser;
 
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
     private final RepositoryUser repositoryUser;
+
     public UserServiceImpl(RepositoryUser repositoryUser) {
         this.repositoryUser = repositoryUser;
     }

@@ -1,7 +1,5 @@
 package Project.Controller;
 
-import Project.Validator.AccountValidator;
-import Project.Validator.UsersValidator;
 import Project.repository.RepositoryAccount;
 import Project.repository.RepositoryOperation;
 import Project.repository.RepositoryUser;

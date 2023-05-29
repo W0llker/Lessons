@@ -4,18 +4,15 @@ import Project.Class.Accounts;
 import Project.Class.Currency;
 import Project.Class.Operation;
 import Project.Class.Users;
-import Project.Exception.ExceptionExit;
 import Project.Exception.ExceptionOperation;
 import Project.Exception.ExceptionUsers;
 import Project.Service.ClientService;
-import Project.Validator.AccountValidator;
 import Project.repository.CurrencyRepository;
 import Project.repository.RepositoryAccount;
 import Project.repository.RepositoryOperation;
 import Project.repository.RepositoryUser;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

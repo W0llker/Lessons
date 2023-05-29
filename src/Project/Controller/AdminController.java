@@ -90,7 +90,7 @@ public class AdminController {
                     service.payCommissions(service.getCommissionsAccount(users.getId()));
                     break;
                 case "10":
-                    System.out.println("Cумма коммисий не переведенных = " + service.getValueCommissions());
+                    System.out.println("Сумма коммисий не переведенных = " + service.getValueCommissions());
                     break;
                 case "11":
                     System.out.println("Введите процент от коммиссии");
@@ -140,6 +140,7 @@ public class AdminController {
         }
         adminMenu(scanner, users);
     }
+
     private void listUsers(Scanner scanner) throws ExceptionUsers {
         List<List<Users>> listList = service.getListUsers();
         int a = 1;
@@ -148,11 +149,12 @@ public class AdminController {
             System.out.println("Текущая страница " + a + " Всего страниц " + listList.size() +
                     "\nВведите страницу которую хотите посмотреть");
             a = scanner.nextInt();
-            if(a > listList.size()) {
+            if (a > listList.size()) {
                 throw new ExceptionUsers("Нету такой страницы");
             }
         } while (a > 0);
     }
+
     private void listOperation(Scanner scanner) throws ExceptionUsers {
         List<List<Operation>> listList = service.getListOperation();
         int a = 1;
@@ -161,7 +163,7 @@ public class AdminController {
             System.out.println("Текущая страница " + a + " Всего страниц " + listList.size() +
                     "\nВведите страницу которую хотите посмотреть");
             a = scanner.nextInt();
-            if(a > listList.size()) {
+            if (a > listList.size()) {
                 throw new ExceptionUsers("Нету такой страницы");
             }
         } while (a > 0);

@@ -10,7 +10,6 @@ import Project.Exception.BankException;
 import Project.Exception.ExceptionExit;
 import Project.Exception.ExceptionUsers;
 
-import java.io.Console;
 import java.util.Scanner;
 
 public class Start {
@@ -35,7 +34,7 @@ public class Start {
                     Users users = userController.registration(scanner);
                 } else if (work.equals("2")) {
                     Users users = userController.autotenification(scanner);
-                    lestgoMenu(users, clientController, adminController, scanner);
+                    lestGoMenu(users, clientController, adminController, scanner);
                 }
             }
         } catch (ExceptionUsers e) {
@@ -45,10 +44,11 @@ public class Start {
         }
         menu();
     }
-    public static void lestgoMenu(Users users,ClientController clientController, AdminController adminController,Scanner scanner) throws ExceptionExit {
-        if(users.getRole().equals(Role.ADMIN)) {
+
+    public static void lestGoMenu(Users users, ClientController clientController, AdminController adminController, Scanner scanner) throws ExceptionExit {
+        if (users.getRole().equals(Role.ADMIN)) {
             adminController.adminMenu(scanner, users);
-        } else if(users.getRole().equals(Role.CLIENT)) {
+        } else if (users.getRole().equals(Role.CLIENT)) {
             clientController.clientMenu(scanner, users);
         }
     }

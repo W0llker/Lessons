@@ -12,6 +12,7 @@ public interface AdminService {
     List<Operation> getAllOperation();
 
     List<Operation> getOperationUsers(long id);
+
     void createUsers(String login, String password, String name, String surName) throws ExceptionUsers;
 
     void deleteUsers(long id);
@@ -37,6 +38,8 @@ public interface AdminService {
     void changeCommissions(double valueCommissions);
 
     void getInformationUser(long id) throws ExceptionUsers;
+
     List<List<Operation>> getListOperation();
+
     List<List<Users>> getListUsers();
 }

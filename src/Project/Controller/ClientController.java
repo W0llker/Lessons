@@ -9,7 +9,6 @@ import Project.Service.ClientService;
 import Project.Service.impl.ClientServiceImpl;
 import Project.Validator.AccountValidator;
 import Project.Validator.UsersValidator;
-import Project.repository.CurrencyRepository;
 import Project.repository.RepositoryAccount;
 import Project.repository.RepositoryOperation;
 import Project.repository.RepositoryUser;
@@ -132,7 +131,7 @@ public class ClientController {
             }
         } catch (ExceptionUsers | ExceptionOperation e) {
             System.err.println(e.getMessage());
-            System.out.println("");
+            System.out.println();
         }
         System.out.println();
         clientMenu(scanner, users);
@@ -164,7 +163,7 @@ public class ClientController {
         } else throw new ExceptionUsers("Данные введены неверно");
     }
 
-    private void confirmationTranslation(long id, Scanner scanner,Users user) throws ExceptionUsers, ExceptionOperation {
+    private void confirmationTranslation(long id, Scanner scanner, Users user) throws ExceptionUsers, ExceptionOperation {
         Accounts accounts = accountValidator.checkAccountNotTheUsers(id, user.getId());
         Users users = repositoryUser.getUsers(accounts.getUserId());
         System.out.println("Пользователь \n" + users.userInformation() + "\nсчет на который " +
