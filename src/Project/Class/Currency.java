@@ -1,12 +1,9 @@
 package Project.Class;
 
+import java.util.HashMap;
+
 public class Currency {
-    private String nameCurrency;
-    private double value;
-
-    public Currency(String nameCurrency, double value) {
-        this.nameCurrency = nameCurrency;
-        this.value = value;
-    }
-
+    public final static String[] name = {"EUR", "RUB", "BYN", "USD"};
+    public static HashMap<String, Double> currency = new HashMap<>();
+    public static double commission;
 }

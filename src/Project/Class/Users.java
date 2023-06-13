@@ -2,8 +2,6 @@ package Project.Class;
 
 import java.io.Serial;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Users implements Serializable {
@@ -22,6 +20,10 @@ public class Users implements Serializable {
         this.password = password;
         this.name = name;
         this.surName = surName;
+    }
+
+    public String userInformation() {
+        return "Имя:" + name + " Фамилия:" + surName;
     }
 
     @Override

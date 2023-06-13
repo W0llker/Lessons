@@ -1,17 +1,27 @@
 package Project.Controller;
 
 import Project.Class.Users;
+import Project.Exception.ExceptionUsers;
 import Project.Service.UserService;
 import Project.Service.impl.UserServiceImpl;
+import Project.Validator.UsersValidator;
+import Project.repository.RepositoryUser;
 
 import java.util.Scanner;
 
 public class UserController {
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
+    private final UsersValidator usersValidator;
 
-    public Users registration(Scanner scanner) {
+    public UserController(RepositoryUser repositoryUser) {
+        userService = new UserServiceImpl(repositoryUser);
+        usersValidator = new UsersValidator();
+    }
+
+    public Users registration(Scanner scanner) throws ExceptionUsers {
         System.out.println("Введите логин");
         String login = scanner.next();
+        usersValidator.checkLogin(login);
         System.out.println("Введите пароль");
         String password = scanner.next();
         System.out.println("Введите имя");
@@ -21,7 +31,7 @@ public class UserController {
         return userService.createUsers(login, password, name, surName);
     }
 
-    public Users autotenification(Scanner scanner) {
+    public Users autotenification(Scanner scanner) throws ExceptionUsers {
         System.out.println("Введите логин");
         String login = scanner.next();
         System.out.println("Введите пароль");
