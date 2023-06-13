@@ -11,7 +11,11 @@ import java.util.Optional;
 
 public class RepositoryUser {
     private final static File file = new File("resources/users");
-    public static List<Users> usersList = new ArrayList<>();
+    public static List<Users> usersList;
+
+    public RepositoryUser() {
+        usersList = new ArrayList<>();
+    }
 
     public void serialization(Users users) {
         usersList = deserialization();

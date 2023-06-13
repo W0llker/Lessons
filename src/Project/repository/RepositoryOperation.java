@@ -7,7 +7,11 @@ import java.util.*;
 
 public class RepositoryOperation {
     private final static File file = new File("resources/operation");
-    private static List<Operation> operations = new ArrayList<>();
+    private static List<Operation> operations;
+
+    public RepositoryOperation() {
+        operations = new ArrayList<>();
+    }
 
     public void serialization(Operation operation) {
         operations = deserialization();

@@ -11,7 +11,11 @@ import java.util.Optional;
 
 public class RepositoryAccount {
     private final static File file = new File("resources/account");
-    public static List<Accounts> accountsList = new ArrayList<>();
+    private static List<Accounts> accountsList;
+
+    public RepositoryAccount() {
+        accountsList = new ArrayList<>();
+    }
 
     public void serialization(Accounts account) {
         accountsList = deserialization();

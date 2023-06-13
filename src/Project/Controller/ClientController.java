@@ -131,7 +131,7 @@ public class ClientController {
             }
         } catch (ExceptionUsers | ExceptionOperation e) {
             System.err.println(e.getMessage());
-            System.out.println();
+            System.out.println("");
         }
         System.out.println();
         clientMenu(scanner, users);
