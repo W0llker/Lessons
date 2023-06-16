@@ -1,7 +1,7 @@
 package Project;
 
-import Project.StartMenu.CurrencySetting;
-import Project.StartMenu.Start;
+import Project.startMenu.CurrencySetting;
+import Project.startMenu.Start;
 
 
 import java.util.Timer;

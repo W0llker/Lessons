@@ -1,7 +1,7 @@
 package Project.repository;
 
-import Project.Class.Users;
-import Project.Exception.ExceptionUsers;
+import Project.class_ob.Users;
+import Project.exception.ExceptionUsers;
 
 import java.io.*;
 import java.util.ArrayList;
